@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="angular.min.js"></script>
+  <script src="controller.js"></script>
+</head>
+  <body style="background-color:lightblue;" ng-app="nebula" ng-controller="control">
+	
+	<div id="accordion">
+		<div class="card bg-info">
+		  <div class="card-header" id="headingOne">
+			<h5 class="mb-0">
+			  <button class="btn btn-link text-light" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				<h3>Modelo</h3>
+			  </button>
+			</h5>
+		  </div>
+	  
+		  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+			<div class="card-body">
+				<img src="arium_nova.svg" ng-click="modelo('nova')" class="img-fluid" alt="Nova"  width="300">
+				<img src="arium_thanos.svg" ng-click="modelo('thanos')" class="img-fluid" alt="Thanos" width="300" > 
+				<img src="arium_nebula.svg" ng-click="modelo('nebula')" class="img-fluid" alt="Nebula" width="300" >			</div>
+		  </div>
+		</div>
+		<div class="card bg-warning">
+		  <div class="card-header" id="headingTwo">
+			<h5 class="mb-0">
+			  <button class="btn btn-link text-light collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+				<h3>Cor</h3>
+			  </button>
+			</h5>
+		  </div>
+		  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+			<div class="card-body">
+				<img src="laranja.png" ng-click="cor('laranja')" class="img-fluid" alt="Nova"  width="100">
+				<img src="vermelho.png" ng-click="cor('vermelho')" class="img-fluid" alt="Thanos" width="100" > 
+				<img src="roxo.png" ng-click="cor('roxo')"class="img-fluid" alt="Nebula" width="100" >
+				<img src="verde.png" ng-click="cor('verde')" class="img-fluid" alt="Nova"  width="100">
+				<img src="azul.png" ng-click="cor('azul')" class="img-fluid" alt="Thanos" width="100" > 			</div>
+		  </div>
+		</div>
+		<div class="card bg-success">
+		  <div class="card-header" id="headingThree">
+			<h5 class="mb-0">
+			  <button class="btn btn-link  text-light collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+				<h3>Interior</h3>
+			  </button>
+			</h5>
+		  </div>
+		  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+			<div class="card-body">
+				<img src="brown_leather.jpg" ng-click="interior('brown_leather')" class="img-fluid" alt="Nova"  width="200">
+				<img src="grey_leather.jpg" ng-click="interior('grey_leather')" class="img-fluid" alt="Thanos" width="200" > 
+				<img src="white_leather.jpg" ng-click="interior('white_leather')" class="img-fluid" alt="Nebula" width="200" >
+				<img src="red_leather.jpg" ng-click="interior('red_leather')" class="img-fluid" alt="Nova"  width="200">			</div>
+		  </div>
+		</div>
+	  </div>
+	  <button type="button" ng-click="createCar()" class="btn-warning" ng-show="!hasFinished()" >Fazer pedido</button>
+	  <div class="alert alert-success">
+	    <strong>{{ mensagem }}</strong> 
+	  </div>
+	  <button type="button" ng-show="hasFinished()" class="btn-warning" ng-click="solicitaSeguro()">Solicitar seguro</button>	
+	  
+	  <div class="alert alert-success">
+	    <strong>Modelo :  {{ bloco.modelo }}</strong><br/> 
+		<strong>Cor :  {{ bloco.cor }}</strong><br/>
+		<strong>Interior :  {{ bloco.interior }}</strong><br/>
+	  </div>
+
+	  <div class="alert alert-success">
+	    <strong>{{ mensagem2 }}</strong> 
+	  </div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+[
+    {
+        "transactionName": "apiJavaExists",
+        "transactionLabel": "A test apiJavaExists transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "createApiJava",
+        "transactionLabel": "A test createApiJava transaction",
+        "arguments": [
+            "001",
+            "some value"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "readApiJava",
+        "transactionLabel": "A test readApiJava transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "updateApiJava",
+        "transactionLabel": "A test updateApiJava transaction",
+        "arguments": [
+            "001",
+            "some other value"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "deleteApiJava",
+        "transactionLabel": "A test deleteApiJava transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {}
+    }
+]

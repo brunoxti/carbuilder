@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "APIJava"
+		},
+		{
+			"path": "car-builder"
+		},
+		{
+			"path": "serverSide"
+		},
+		{
+			"path": "manufacturer"
+		},
+		{
+			"path": "insurance"
+		}
+	],
+	"settings": {}
+}
