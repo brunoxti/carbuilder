@@ -11,7 +11,7 @@ app.controller('control', [ '$scope', '$http', '$interval', '$window', function(
 		$scope.mensagem2 = "Sem seguro";
 
 		$scope.bloco = { 
-			"chave": "1661886325345",
+			"chave": new Date().getTime(),
 		    "modelo": "",
 			"cor": "",
 			"interior": "",
